@@ -10,6 +10,16 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = link_to "awsome-manager", root_path
-    %br/
-    = link_to "githubでログインする", "/auth/github", method: "post"
+ 
+    - if entered?
+      %p.nav-item
+        = link_to "ログアウト", logout_path , method: :delete
+    - else
+      %p.nav-item
+        = link_to "githubでログインする", "/auth/github", method: "post"
+    
+    .container
+      - if notice
+        %div.alert.alert-success
+          = flash.notice
     = yield
