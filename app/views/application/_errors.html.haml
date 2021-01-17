@@ -1,5 +1,5 @@
-- if @event.errors.present?
+- if errors.present?
   .alert.alert-danger
     %ul
-    - @event.errors.full_messages.each do |m|
-      %li= m
+      - @event.errors.full_messages.each do |m|
+        %li= m

@@ -8,8 +8,6 @@ class EventsController < ApplicationController
         @event = current_user.events.build(e_params)
         if @event.save
             redirect_to event_path(@event), notice:"[成功]イベントを作成しました"
-        else
-            render :new
         end
     end
 

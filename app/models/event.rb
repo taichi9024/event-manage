@@ -1,12 +1,13 @@
 class Event < ApplicationRecord
   belongs_to :user
-  has_many :tickets
+  has_many :tickets, dependent: :destroy
 
   validates :name, presence: true
   validates :place, presence: true
   validates :start_time, presence: true
   validates :end_time, presence: true
   validates :content, presence: true
+
 
   validate :end_over_start
 

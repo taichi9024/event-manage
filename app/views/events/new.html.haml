@@ -2,14 +2,8 @@
 
 %h2.text-center イベント作成ページ
 
-- if @event.errors.present?
-  .alert.alert-danger
-    %ul
-      - @event.errors.full_messages.each do |m|
-        %li= m
-
-= form_with(model:@event, url: events_path, local: true) do |f|
-  
+= form_with(model:@event,remote: true) do |f|
+  #errors
   .form-group
     = f.label :name
     = f.text_field:name, class:"form-control"

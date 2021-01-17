@@ -32,4 +32,7 @@
         %div.alert.alert-danger
           = flash.alert
     = yield
+    %div.text-right
+      - if params[:controller] != "deletes"
+        = link_to "退会", new_delete_path, class:"btn btn-link"
     = debug(params)
