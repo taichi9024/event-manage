@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class Base < ApplicationController
     helper_method :entered? 
     helper_method :current_user
 
@@ -18,4 +18,5 @@ class ApplicationController < ActionController::Base
         return unless session[:user_id]
         @current_user = User.find_by(id: session[:user_id])
     end
+
 end

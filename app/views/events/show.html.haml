@@ -1,0 +1,29 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th{:scope => "col"} #
+      %th{:scope => "col"} First
+  %tbody
+    %tr
+      %th{:scope => "row"} name
+      %td
+        =@event.name
+    %tr
+      %th{:scope => "row"} place
+      %td
+        =@event.place
+
+    %tr
+      %th{:scope => "row"} start_time
+      %tb
+        =@event.start_time
+
+    %tr
+      %th{:scope => "row"} end_time
+      %td
+        =@event.end_time
+
+    %tr
+      %th{:scope => "row"} content
+      %td
+        = @event.content

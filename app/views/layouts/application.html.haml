@@ -9,17 +9,23 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = link_to "awsome-manager", root_path
- 
-    - if entered?
-      %p.nav-item
+    %h4
+      = link_to "awsome-manager", root_path
+      - if current_user
+        %p.nav-item
         = link_to "ログアウト", logout_path , method: :delete
-    - else
-      %p.nav-item
+      - else
+        %p.nav-item
         = link_to "githubでログインする", "/auth/github", method: "post"
     
+    %h4.text-right
+      = link_to "イベント作成",new_event_path,class:"btn bnt-primary"
+
     .container
       - if notice
         %div.alert.alert-success
           = flash.notice
+      - if alert
+        %div.alert.alert-danger
+          = flash.alert
     = yield
