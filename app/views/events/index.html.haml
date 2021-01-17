@@ -1,0 +1,7 @@
+%h2.text-center イベント一覧
+
+%ul.list-group
+  - @events.each do |event|
+    = link_to event, class:"list-group-item list-group-action" do
+      %h3.text-center= event.name
+      %h3.text-center= event.start_time

@@ -1,0 +1,32 @@
+- now = Time.zone.now
+
+%h2.text-center イベント編集ページ
+
+- if @event.errors.present?
+  .alert.alert-danger
+    %ul
+      - @event.errors.full_messages.each do |m|
+        %li= m
+
+= form_with(model:@event, url: event_path, local: true) do |f|
+  
+  .form-group
+    = f.label :name
+    = f.text_field:name, class:"form-control"
+  
+  .form-group
+    = f.label:place
+    = f.text_field:place, class:"form-control"
+  
+  .form-group
+    = f.label:start_time
+    = f.datetime_select:start_time,start_year: now.year, end_year: now.year + 2, class:"form-control"
+  
+  .form-group
+    = f.label:end_date
+    = f.datetime_select:end_time,start_year: now.year, end_year: now.year + 2, class:"form-control"
+  
+  .form-group
+    = f.label:content
+    = f.text_area:content, class:"form-control"
+    = f.submit

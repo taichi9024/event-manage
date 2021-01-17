@@ -8,6 +8,8 @@ class Event < ApplicationRecord
 
   validate :end_over_start
 
+  scope :active, -> {where("end_time > ?", Time.zone.now)}
+
   def end_over_start
     unless end_time > start_time
       errors.add(:start_time, "は終了時刻より前に設定してください！")
