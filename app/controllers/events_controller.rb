@@ -7,15 +7,17 @@ class EventsController < ApplicationController
         @event = current_user.events.build(e_params)
         if @event.save
             redirect_to event_path(@event), notice:"[成功]イベントを作成しました"
+        else
+            render :new
         end
     end
 
     def show
-        @event = current_user.events.find_by(id: params[:id])
+        @event = Event.find_by(id: params[:id])
     end
 
     private
     def e_params
-        params.require(:event).permit(:name, :place, :start_date, :end_date, :content)
+        params.require(:event).permit(:name, :place, :start_time, :end_time, :content)
     end
 end

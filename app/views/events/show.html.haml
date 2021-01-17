@@ -1,3 +1,4 @@
+%h2.text-center= @event.name
 %table.table.table-striped
   %thead
     %tr
@@ -15,15 +16,22 @@
 
     %tr
       %th{:scope => "row"} start_time
-      %tb
-        =@event.start_time
+      %td
+        =I18n.l(@event.start_time, format: :long)
 
     %tr
       %th{:scope => "row"} end_time
       %td
-        =@event.end_time
+        =I18n.l(@event.end_time, format: :long)
 
     %tr
       %th{:scope => "row"} content
       %td
         = @event.content
+
+    %tr
+      %th{:scope => "row"} 主催者
+      %td
+        = link_to ("https://github.com/#{@event.user.name}") do
+          = @event.user.name
+          = image_tag @event.user.image_url, width:50, height:50

@@ -33,6 +33,7 @@ gem "omniauth-github"
 gem "omniauth-rails_csrf_protection"
 gem "hamlit-rails"
 gem "html2haml"
+gem "rails-i18n"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
