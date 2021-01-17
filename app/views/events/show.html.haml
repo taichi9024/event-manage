@@ -1,4 +1,8 @@
 %h2.text-center= @event.name
+- if correct_person?
+  %div= link_to "編集する", edit_event_path(@event), class:"btn btn-primary"
+  %div= link_to "削除する", event_path(@event), method: :delete, class:"btn btn-danger", data:{confirm: "削除してもよろしいですか？"}
+  
 %table.table.table-striped
   %thead
     %tr
@@ -36,7 +40,21 @@
           = @event.user.name
           = image_tag @event.user.image_url, width:50, height:50
 
-- if correct_person?
-  %div= link_to "編集する", edit_event_path(@event), class:"btn btn-primary"
-  %div= link_to "削除する", event_path(@event), method: :delete, class:"btn btn-danger", data:{confirm: "削除してもよろしいですか？"}
+
+- if current_user.tickets.find_by(event_id: params[:id])
+  = link_to "参加取り消し", event_ticket_path(@event.id, params[:id]), method: :delete, class:"btn btn-success"
+- else
+  %div.form-group
+    = form_with model:@ticket, url:event_tickets_path(@event.id), local: true do |f|
+      = f.label :comment
+      = f.text_area:comment, placeholder:"参加コメントを入力してください", class:"form-control"
+      = f.submit "参加する" ,class:"btn btn-info"
   
+
+%h4 イベント参加者
+- Ticket.where(event_id: params[:id]).each do |t|
+  %span= link_to t.user.name, "https://github.com/#{t.user.name}"
+  %span= t.comment
+
+
+
