@@ -1,35 +1,35 @@
 %h2.text-center= @event.name
-- if correct_person?
-  %div= link_to "編集する", edit_event_path(@event), class:"btn btn-primary"
-  %div= link_to "削除する", event_path(@event), method: :delete, class:"btn btn-danger", data:{confirm: "削除してもよろしいですか？"}
+
+%div= link_to "編集する", edit_event_path(@event), class:"btn btn-primary"
+%div= link_to "削除する", event_path(@event), method: :delete, class:"btn btn-danger", data:{confirm: "削除してもよろしいですか？"}
   
 %table.table.table-striped
   %thead
     %tr
       %th{:scope => "col"} #
-      %th{:scope => "col"} First
+      %th{:scope => "col"} ＃
   %tbody
     %tr
-      %th{:scope => "row"} name
+      %th{:scope => "row"} イベント名
       %td
         =@event.name
     %tr
-      %th{:scope => "row"} place
+      %th{:scope => "row"} 場所
       %td
         =@event.place
 
     %tr
-      %th{:scope => "row"} start_time
+      %th{:scope => "row"} 開始時刻
       %td
         =l(@event.start_time, format: :long)
 
     %tr
-      %th{:scope => "row"} end_time
+      %th{:scope => "row"} 終了時刻
       %td
         =l(@event.end_time, format: :long)
 
     %tr
-      %th{:scope => "row"} content
+      %th{:scope => "row"} 内容
       %td
         = @event.content
 
