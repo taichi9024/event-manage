@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "status" => "status#index", defaults:{format:"json"}
   resources :events do
     resources :tickets , only:[:new, :create, :destroy]
   end

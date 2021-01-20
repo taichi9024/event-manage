@@ -2,11 +2,6 @@ require "application_system_test_case"
 
 class EventsTest < ApplicationSystemTestCase
 
-  setup do
-    sign_in_as(FactoryBot.create(:user))
-    event = FactoryBot.create(:event)
-  end
-
   teardown do
     sleep 3
   end
@@ -35,13 +30,13 @@ class EventsTest < ApplicationSystemTestCase
     assert_selector "div.alert", text:"[成功]イベントを作成しました"
   end
 
-  # test "イベント削除 成功" do
-  #   visit event_path(FactoryBot.create(:event))
-  #   assert_difference("Event.count", -1) do
-  #     accept_confirm do
-  #       click_on "削除する"
-  #       assert_selector "div.alert", text:"削除してもよろしいですか？"
-  #     end
-  #   end
-  #end
+  test "イベント削除 成功" do
+    sign_in_as(FactoryBot.create(:user))
+    event = FactoryBot.create(:event, user: current_user)
+    visit event_path(event)
+    accept_confirm do
+      click_on "削除する"
+    end
+    assert_selector "h2", text:"イベント一覧"
+  end
 end
