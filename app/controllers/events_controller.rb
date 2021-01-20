@@ -43,7 +43,7 @@ class EventsController < ApplicationController
         params.require(:event).permit(:name, :place, :start_time, :end_time, :content)
     end
 
-    def correct_person?
+    def correct_person?(current_user)
         @event = Event.find_by(id: params[:id])
         if current_user == @event.user
             true
