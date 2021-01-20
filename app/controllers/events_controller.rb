@@ -40,7 +40,7 @@ class EventsController < ApplicationController
 
     private
     def e_params
-        params.require(:event).permit(:name, :place, :start_time, :end_time, :content)
+        params.require(:event).permit(:name, :place, :start_time, :end_time, :content, :image, :remove_image)
     end
 
     def correct_person?(current_user)

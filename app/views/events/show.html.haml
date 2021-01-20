@@ -27,6 +27,12 @@
       %th{:scope => "row"} 終了時刻
       %td
         =l(@event.end_time, format: :long)
+    
+    %tr
+      %th{:scope => "row"} 画像
+      %td
+        - if @event.image.attached?
+          = image_tag @event.image, width:200, height:200
 
     %tr
       %th{:scope => "row"} 内容

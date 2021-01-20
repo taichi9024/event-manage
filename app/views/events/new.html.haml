@@ -20,6 +20,10 @@
     = f.label:end_time
     /= f.datetime_select:end_time,start_year: now.year, end_year: now.year + 2, class:"form-control"
     = f.text_field:end_time
+
+  .form-group
+    = f.label:image
+    = f.file_field:image, class:"form-control-file"
   
   .form-group
     = f.label:content
