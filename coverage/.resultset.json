@@ -1,6 +1,79 @@
 {
   "Minitest": {
     "coverage": {
+      "/Users/noguchi/Desktop/event-menager2/app/models/event.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          3,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/noguchi/Desktop/event-menager2/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/noguchi/Desktop/event-menager2/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
       "/Users/noguchi/Desktop/event-menager2/app/controllers/status_controller.rb": {
         "lines": [
           1,
@@ -85,79 +158,6 @@
       "/Users/noguchi/Desktop/event-menager2/app/helpers/welcome_helper.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/Users/noguchi/Desktop/event-menager2/app/models/event.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          3,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/noguchi/Desktop/event-menager2/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/noguchi/Desktop/event-menager2/app/models/user.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
           null
         ]
       },
@@ -369,6 +369,6 @@
         }
       }
     },
-    "timestamp": 1611232497
+    "timestamp": 1611232893
   }
 }
