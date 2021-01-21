@@ -29,7 +29,7 @@
         =l(@event.end_time, format: :long)
     
     %tr
-      %th{:scope => "row"} 画像
+      %th{:scope => "row"} 画像s
       %td
         - if @event.image.attached?
           = image_tag @event.image, width:200, height:200
