@@ -1,4 +1,7 @@
 class Event < ApplicationRecord
+
+  searchkick language: "japanese"
+
   belongs_to :user
   has_one_attached :image
   has_many :tickets, dependent: :destroy
@@ -9,7 +12,7 @@ class Event < ApplicationRecord
   validates :end_time, presence: true
   validates :content, presence: true
   validates :image, content_type:[:png,:jpg],
-  size: {less_than_or_equal_to: 10.megabytee},
+  size: {less_than_or_equal_to: 10.megabyte},
   dimension: {width: {max: 2000}, height:{height:2000}}
 
   validate :end_over_start
@@ -28,6 +31,15 @@ before_save :remove_image_hoge
 
   def remove_image_hoge
     self.image = nil if ActiveRecord::Type::Boolean.new.cast(remove_image)  
+  end
+
+  def search_data
+    {
+      name: name,
+      place: place,
+      content: content,
+      start_time: start_time
+    }
   end
 
 end

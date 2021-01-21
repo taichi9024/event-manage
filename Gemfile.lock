@@ -85,6 +85,14 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    elasticsearch (7.10.1)
+      elasticsearch-api (= 7.10.1)
+      elasticsearch-transport (= 7.10.1)
+    elasticsearch-api (7.10.1)
+      multi_json
+    elasticsearch-transport (7.10.1)
+      faraday (~> 1)
+      multi_json
     erubi (1.10.0)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -127,6 +135,18 @@ GEM
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
     jwt (2.2.2)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -231,6 +251,10 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    searchkick (4.4.2)
+      activemodel (>= 5)
+      elasticsearch (>= 6)
+      hashie
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -288,6 +312,7 @@ DEPENDENCIES
   html2haml
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
+  kaminari (~> 1.2.0)
   listen (~> 3.3)
   omniauth
   omniauth-github
@@ -297,6 +322,7 @@ DEPENDENCIES
   rails (~> 6.1.1)
   rails-i18n
   sass-rails (>= 6)
+  searchkick
   selenium-webdriver
   spring
   sqlite3 (~> 1.4)

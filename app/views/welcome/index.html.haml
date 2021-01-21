@@ -1,1 +1,9 @@
 %h1.text-center EVENT-MANAGER
+
+%ul.list-group
+  - @events.each do |event|
+    = link_to(event, class:"list-group-item list-group-item-action") do
+      %h5.list-group-item-heading= event.name
+      %p="#{l(event.start_time, format: :long)} - #{l(event.end_time, format: :long)}"
+
+= paginate @events

@@ -1,0 +1,5 @@
+ja:
+  views:
+    pagination:
+      next: "次"
+      last: "最後"

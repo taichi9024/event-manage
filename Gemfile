@@ -35,6 +35,8 @@ gem "hamlit-rails"
 gem "html2haml"
 gem "rails-i18n"
 gem "active_storage_validations"
+gem "kaminari", "~> 1.2.0"
+gem "searchkick"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
