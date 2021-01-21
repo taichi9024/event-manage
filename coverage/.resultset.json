@@ -88,30 +88,6 @@
           null
         ]
       },
-      "/Users/noguchi/Desktop/event-menager2/app/models/user.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/noguchi/Desktop/event-menager2/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/noguchi/Desktop/event-menager2/app/models/event.rb": {
         "lines": [
           1,
@@ -157,6 +133,30 @@
           null,
           null,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/noguchi/Desktop/event-menager2/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/noguchi/Desktop/event-menager2/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
           null,
           null
         ]
@@ -369,6 +369,6 @@
         }
       }
     },
-    "timestamp": 1611231073
+    "timestamp": 1611232497
   }
 }

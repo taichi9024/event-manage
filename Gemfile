@@ -38,7 +38,6 @@ gem "active_storage_validations"
 gem "kaminari", "~> 1.2.0"
 gem "searchkick"
 gem "simplecov", require: false, group: :test
-gem "coveralls", require: false, group: :test
 gem "skylight"
 
 group :development, :test do

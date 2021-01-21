@@ -4,9 +4,6 @@ require_relative "../config/environment"
 require "simplecov"
 SimpleCov.start "rails"
 
-require "coveralls"
-Coveralls.wear!("rails")
-
 require "rails/test_help"
 require "factory_bot_rails"
 require_relative "sign_in_helper"
