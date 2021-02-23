@@ -1,24 +1,9 @@
-# README
+## イベント作成アプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 概要
+- イベントを作成でき、また他人が作成したイベントに参加を表明できるアプリ
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 目的
+- hamlを使った記述に慣れる
+- omniauthを使ってAPIへの理解を深める
+- rubocopやbrakeman等のコード解析、整形ツールへの理解を深める
